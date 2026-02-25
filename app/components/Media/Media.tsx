@@ -2,9 +2,9 @@ import styles from './Media.module.css';
 
 export default function Media() {
   const videos = [
-    { title: '병의원 절세 전략', thumbnail: '' },
-    { title: '법인 전환 가이드', thumbnail: '' },
-    { title: '세무조사 대응법', thumbnail: '' },
+    { title: '병의원 절세 전략' },
+    { title: '법인 전환 가이드' },
+    { title: '세무조사 대응법' },
   ];
 
   return (

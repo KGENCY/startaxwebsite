@@ -45,68 +45,47 @@ export default function Services() {
         </div>
 
         <div className={styles.grid}>
-          {services.map((service, index) => {
-            const cardContent = (
-              <>
-                <h3 className={styles.cardTitle}>
-                  {service.title}
-                  {service.href && (
-                    <svg
-                      className={styles.arrowIcon}
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7" />
-                      <polyline points="7 7 17 7 17 17" />
-                    </svg>
-                  )}
-                </h3>
-                <ul className={styles.list}>
-                  {service.items.map((item, idx) => (
-                    <li key={idx}>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path
-                          d="M16.667 5L7.5 14.167L3.333 10"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </>
-            );
-
-            if (service.href) {
-              return (
-                <Link
-                  key={index}
-                  href={service.href}
-                  className={`${styles.card} ${styles.cardLink} ${service.highlight ? styles.highlight : ''}`}
+          {services.map((service, index) => (
+            <Link
+              key={index}
+              href={service.href}
+              className={`${styles.card} ${styles.cardLink} ${service.highlight ? styles.highlight : ''}`}
+            >
+              <h3 className={styles.cardTitle}>
+                {service.title}
+                <svg
+                  className={styles.arrowIcon}
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
-                  {cardContent}
-                </Link>
-              );
-            }
-
-            return (
-              <div
-                key={index}
-                className={`${styles.card} ${service.highlight ? styles.highlight : ''}`}
-              >
-                {cardContent}
-              </div>
-            );
-          })}
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </h3>
+              <ul className={styles.list}>
+                {service.items.map((item, idx) => (
+                  <li key={idx}>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M16.667 5L7.5 14.167L3.333 10"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

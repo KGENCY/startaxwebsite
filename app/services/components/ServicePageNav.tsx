@@ -18,18 +18,23 @@ export default function ServicePageNav({ currentPath }: ServicePageNavProps) {
   const prev = currentIndex > 0 ? SERVICE_PAGES[currentIndex - 1] : SERVICE_PAGES[SERVICE_PAGES.length - 1];
   const next = currentIndex < SERVICE_PAGES.length - 1 ? SERVICE_PAGES[currentIndex + 1] : SERVICE_PAGES[0];
 
+  const navStyle: React.CSSProperties = {
+    fontSize: '18px',
+    gap: '12px',
+  };
+
   return (
     <>
-      <Link href={prev.path} className={styles.prev}>
-        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <Link href={prev.path} className={styles.prev} style={navStyle}>
+        <svg width="12" height="20" viewBox="0 0 8 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <polyline points="7 1 1 7 7 13" />
         </svg>
         <span className={styles.label}>{prev.label}</span>
       </Link>
 
-      <Link href={next.path} className={styles.next}>
+      <Link href={next.path} className={styles.next} style={navStyle}>
         <span className={styles.label}>{next.label}</span>
-        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="12" height="20" viewBox="0 0 8 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <polyline points="1 1 7 7 1 13" />
         </svg>
       </Link>
