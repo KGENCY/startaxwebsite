@@ -44,7 +44,7 @@
   justify-content: center;
   gap: 8px;
   padding: 20px 24px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--text-secondary);
   background: none;
@@ -488,7 +488,7 @@
 
   .keywordBtn {
     padding: 16px 20px;
-    font-size: 13px;
+    font-size: 14px;
     min-width: max-content;
   }
 
