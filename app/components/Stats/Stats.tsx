@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Counter from './Counter';
 import styles from './Stats.module.css';
 
 export default function Stats() {
@@ -50,36 +51,5 @@ export default function Stats() {
         ))}
       </div>
     </section>
-  );
-}
-
-function Counter({ end, duration, suffix }: { end: number; duration: number; suffix: string }) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
-
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-
-      setCount(Math.floor(progress * end));
-
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-
-    return () => cancelAnimationFrame(animationFrame);
-  }, [end, duration]);
-
-  return (
-    <>
-      {count.toLocaleString()}
-      {suffix}
-    </>
   );
 }

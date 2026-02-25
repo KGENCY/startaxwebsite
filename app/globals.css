@@ -32,7 +32,6 @@
   --color-text-muted: var(--text-muted);
   --color-accent-gold: var(--accent-gold);
   --color-accent-gold-light: var(--accent-gold-light);
-  --color-accent-blue: var(--accent-blue);
   --color-border-subtle: var(--border-subtle);
   --color-border-hover: var(--border-hover);
 
@@ -97,25 +96,3 @@ button {
   transition: all 0.3s ease;
 }
 
-/* Utility Classes */
-.section {
-  padding: 120px 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 80px 20px;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
-}

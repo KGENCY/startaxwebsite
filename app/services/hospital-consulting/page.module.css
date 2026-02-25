@@ -1,0 +1,782 @@
+/* ═══════════════════════════════════════════
+   병의원 전문 컨설팅 페이지 (Hospital Consulting)
+   공통 스타일: ../styles/shared.module.css
+   ═══════════════════════════════════════════ */
+
+/* ── Shared Composes ── */
+.hero { composes: hero from '../styles/shared.module.css'; padding: 200px 24px 0; }
+.heroGlow { composes: heroGlow from '../styles/shared.module.css'; top: 50%; }
+.heroContent { composes: heroContent from '../styles/shared.module.css'; padding-bottom: 80px; }
+.tag { composes: tag from '../styles/shared.module.css'; }
+.heroTitle { composes: heroTitle from '../styles/shared.module.css'; }
+.goldText { composes: goldText from '../styles/shared.module.css'; }
+.heroDesc { composes: heroDesc from '../styles/shared.module.css'; }
+.section { composes: section from '../styles/shared.module.css'; }
+.sectionAlt { composes: sectionAlt from '../styles/shared.module.css'; }
+.container { composes: container from '../styles/shared.module.css'; }
+.sectionHeader { composes: sectionHeader from '../styles/shared.module.css'; }
+.sectionTitle { composes: sectionTitle from '../styles/shared.module.css'; }
+.sectionDesc { composes: sectionDesc from '../styles/shared.module.css'; max-width: 600px; }
+
+/* ═══════════════════════════════════════════
+   Keyword Navigation Bar
+   ═══════════════════════════════════════════ */
+.keywordNav {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(21, 21, 21, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+.keywordContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+.keywordBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.keywordBtn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: width 0.3s ease;
+}
+
+.keywordBtn:hover {
+  color: var(--text-primary);
+}
+
+.keywordBtn:hover::after {
+  width: 60%;
+}
+
+.keywordBtn svg {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.keywordBtn:hover svg {
+  opacity: 1;
+  transform: translateY(2px);
+}
+
+.keywordActive {
+  color: var(--accent-gold);
+}
+
+.keywordActive::after {
+  width: 60%;
+}
+
+.keywordActive svg {
+  opacity: 1;
+  color: var(--accent-gold);
+}
+
+/* ═══════════════════════════════════════════
+   Common Content Blocks
+   ═══════════════════════════════════════════ */
+.contentBlock {
+  max-width: 800px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.bodyText {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.subTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ═══════════════════════════════════════════
+   세무진단/조사 (Tax Audit)
+   ═══════════════════════════════════════════ */
+.rightsSection {
+  margin-bottom: 72px;
+}
+
+.rightsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.rightCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 32px 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.rightCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+}
+
+.rightNum {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+  opacity: 0.7;
+}
+
+.rightText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.strategySection {
+  margin-top: 72px;
+}
+
+.strategyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.strategyCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.4s ease;
+}
+
+.strategyCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+}
+
+.strategyCardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.strategyCardDesc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ═══════════════════════════════════════════
+   사내근로복지기금 (Welfare Fund)
+   ═══════════════════════════════════════════ */
+.benefitTriple {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.benefitGroup {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 40px 28px;
+  transition: all 0.4s ease;
+}
+
+.benefitGroup:hover {
+  border-color: var(--border-hover);
+}
+
+.benefitPerspective {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.benefitLabel {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.benefitList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.benefitItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.benefitDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.benefitTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.benefitDesc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* ═══════════════════════════════════════════
+   MSO설립/운영 (MSO)
+   ═══════════════════════════════════════════ */
+.msoTargetSection {
+  margin-top: 16px;
+}
+
+.msoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.msoCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 36px 28px;
+  transition: all 0.4s ease;
+}
+
+.msoCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+}
+
+.msoNum {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.msoCardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.msoCardDesc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ═══════════════════════════════════════════
+   복지몰 (Welfare Mall)
+   ═══════════════════════════════════════════ */
+.welfareMallContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.welfareMallCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 60px 48px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.welfareMallCard:hover {
+  border-color: var(--border-hover);
+}
+
+.welfareMallTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.welfareMallDesc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+}
+
+.welfareMallFeatures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.welfareMallFeature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.welfareMallFeature svg {
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════
+   벤처투자 소득공제 (Venture Investment)
+   ═══════════════════════════════════════════ */
+.deductionSection {
+  margin-bottom: 72px;
+}
+
+.deductionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.deductionCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 40px 32px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.deductionCard:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+}
+
+.deductionAmount {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.deductionRate {
+  font-family: var(--font-mono);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.deductionLabel {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.simulationSection {
+  margin-top: 16px;
+}
+
+.simulationCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.simulationHeader {
+  padding: 20px 32px;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.simulationBody {
+  padding: 40px 32px;
+}
+
+.simulationRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.simulationStep {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 20px 24px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.simulationStepNum {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.simulationStepTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.simulationStepDesc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.simulationPlus {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+.simulationResult {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-subtle);
+  margin-bottom: 16px;
+}
+
+.simulationResultLabel {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.simulationResultAmount {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.simulationRefund {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  background: rgba(212, 175, 122, 0.06);
+  border: 1px solid rgba(212, 175, 122, 0.15);
+  border-radius: 8px;
+}
+
+.simulationRefundLabel {
+  font-size: 16px;
+  color: var(--accent-gold);
+  font-weight: 500;
+}
+
+.simulationRefundAmount {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+/* ═══════════════════════════════════════════
+   기업부설연구소 (Corporate R&D Center)
+   ═══════════════════════════════════════════ */
+.researchBenefits {
+  margin-bottom: 72px;
+}
+
+.researchGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.researchCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.researchCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+}
+
+.researchCardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.processSection {
+  margin-top: 16px;
+}
+
+.processFlow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.processItem {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 32px 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.processItem:hover {
+  border-color: var(--border-hover);
+}
+
+.processStep {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  opacity: 0.7;
+}
+
+.processInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.processTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.processDesc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.processArrow {
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent-gold);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════
+   Responsive - Tablet
+   ═══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .rightsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .strategyGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .benefitTriple {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .msoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .researchGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .processFlow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .processArrow {
+    display: none;
+  }
+
+  .deductionGrid {
+    max-width: 100%;
+  }
+
+  .simulationRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .simulationStep {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   Responsive - Mobile
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero {
+    padding: 160px 20px 0;
+  }
+
+  .keywordContainer {
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .keywordBtn {
+    padding: 16px 20px;
+    font-size: 13px;
+    min-width: max-content;
+  }
+
+  .rightsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .strategyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .msoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .researchGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .processFlow {
+    grid-template-columns: 1fr;
+  }
+
+  .welfareMallCard {
+    padding: 40px 24px;
+  }
+
+  .welfareMallFeatures {
+    grid-template-columns: 1fr;
+  }
+
+  .deductionRate {
+    font-size: 36px;
+  }
+
+  .deductionAmount {
+    font-size: 22px;
+  }
+
+  .simulationRefund {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .simulationRefundAmount {
+    font-size: 28px;
+  }
+
+  .simulationResult {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

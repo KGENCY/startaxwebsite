@@ -158,6 +158,10 @@
 }
 
 @media (max-width: 1024px) {
+  .hero {
+    padding-left: 120px;
+  }
+
   .headline {
     font-size: 46px;
   }
@@ -170,6 +174,9 @@
 @media (max-width: 768px) {
   .hero {
     min-height: 90vh;
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
   }
 
   .content {

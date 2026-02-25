@@ -1,0 +1,900 @@
+/* ═══════════════════════════════════════════
+   경영 컨설팅 페이지 (Business Consulting)
+   공통 스타일: ../styles/shared.module.css
+   ═══════════════════════════════════════════ */
+
+/* ── Shared Composes ── */
+.hero { composes: hero from '../styles/shared.module.css'; padding: 200px 24px 0; }
+.heroGlow { composes: heroGlow from '../styles/shared.module.css'; }
+.heroContent { composes: heroContent from '../styles/shared.module.css'; padding-bottom: 80px; }
+.tag { composes: tag from '../styles/shared.module.css'; }
+.heroTitle { composes: heroTitle from '../styles/shared.module.css'; }
+.goldText { composes: goldText from '../styles/shared.module.css'; }
+.heroDesc { composes: heroDesc from '../styles/shared.module.css'; }
+.section { composes: section from '../styles/shared.module.css'; }
+.sectionAlt { composes: sectionAlt from '../styles/shared.module.css'; }
+.container { composes: container from '../styles/shared.module.css'; }
+.sectionHeader { composes: sectionHeader from '../styles/shared.module.css'; }
+.sectionTitle { composes: sectionTitle from '../styles/shared.module.css'; }
+.sectionDesc { composes: sectionDesc from '../styles/shared.module.css'; }
+
+/* ═══════════════════════════════════════════
+   Keyword Navigation Bar
+   ═══════════════════════════════════════════ */
+.keywordNav {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(21, 21, 21, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+.keywordContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+.keywordBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.keywordBtn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: width 0.3s ease;
+}
+
+.keywordBtn:hover {
+  color: var(--text-primary);
+}
+
+.keywordBtn:hover::after {
+  width: 60%;
+}
+
+.keywordBtn svg {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.keywordBtn:hover svg {
+  opacity: 1;
+  transform: translateY(2px);
+}
+
+.keywordActive {
+  color: var(--accent-gold);
+}
+
+.keywordActive::after {
+  width: 60%;
+}
+
+.keywordActive svg {
+  opacity: 1;
+  color: var(--accent-gold);
+}
+
+/* ═══════════════════════════════════════════
+   Feature Cards
+   ═══════════════════════════════════════════ */
+.featureBlock {
+  margin-top: 48px;
+}
+
+.featureCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 48px 40px;
+  transition: all 0.4s ease;
+}
+
+.featureCard:hover {
+  border-color: var(--border-hover);
+}
+
+.featureNumber {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 24px;
+  opacity: 0.6;
+}
+
+.featureTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.featureBody {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════════
+   Process Flow
+   ═══════════════════════════════════════════ */
+.processFlow {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  align-items: start;
+  gap: 0;
+  margin-top: 40px;
+  padding: 32px;
+  background: var(--bg-elevated);
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+}
+
+.processItem {
+  display: contents;
+}
+
+.processStep {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--bg-primary);
+  background: var(--accent-gold);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 1;
+}
+
+.processInfo {
+  grid-row: 1;
+  padding: 0 8px;
+}
+
+.processTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.processDesc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.processArrow {
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  color: var(--accent-gold);
+  opacity: 0.4;
+  padding: 0 4px;
+}
+
+/* ═══════════════════════════════════════════
+   Table - 벤처기업 인증 혜택
+   ═══════════════════════════════════════════ */
+.tableWrapper {
+  margin-bottom: 40px;
+}
+
+.tableTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+}
+
+.table thead tr {
+  background: var(--bg-elevated);
+}
+
+.table th {
+  padding: 16px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-align: left;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.table th:first-child {
+  width: 100px;
+  text-align: center;
+}
+
+.table td {
+  padding: 16px 24px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: rgba(212, 175, 122, 0.03);
+}
+
+.tableCategoryCell {
+  font-weight: 700;
+  color: var(--accent-gold) !important;
+  text-align: center !important;
+  background: rgba(212, 175, 122, 0.05);
+  white-space: nowrap;
+}
+
+.tableList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tableList li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.tableList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  opacity: 0.6;
+}
+
+/* ═══════════════════════════════════════════
+   Notice Box
+   ═══════════════════════════════════════════ */
+.noticeBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px 24px;
+  background: rgba(212, 175, 122, 0.06);
+  border: 1px solid rgba(212, 175, 122, 0.15);
+  border-radius: 8px;
+  margin-top: 32px;
+}
+
+.noticeBox svg {
+  flex-shrink: 0;
+  color: var(--accent-gold);
+  margin-top: 2px;
+}
+
+.noticeBox p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   Stock Benefit Cards - 자기주식 처분
+   ═══════════════════════════════════════════ */
+.stockBenefitHeading {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.stockBenefitGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.stockBenefitCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+}
+
+.stockBenefitCard:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+}
+
+.stockBenefitIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(212, 175, 122, 0.1);
+  border: 1px solid rgba(212, 175, 122, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  margin-bottom: 24px;
+}
+
+.stockBenefitLabel {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+}
+
+.stockBenefitDesc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.stockBenefitSub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.stockBenefitPairs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stockBenefitPair {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  background: var(--bg-elevated);
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+}
+
+.pairCondition {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.pairResult {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* ═══════════════════════════════════════════
+   Strategy Grid - 전략적 활용
+   ═══════════════════════════════════════════ */
+.strategyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.strategyCard {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.strategyCard:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+}
+
+.strategyTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.strategyDesc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   Tax Points - 세무 관련
+   ═══════════════════════════════════════════ */
+.taxPointGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.taxPointCard {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 32px 28px;
+  transition: all 0.4s ease;
+}
+
+.taxPointCard:hover {
+  border-color: var(--border-hover);
+}
+
+.taxPointLabel {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 12px;
+}
+
+.taxPointDesc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   Highlight Banner - 가업승계
+   ═══════════════════════════════════════════ */
+.highlightBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 32px;
+  background: rgba(212, 175, 122, 0.08);
+  border: 1px solid rgba(212, 175, 122, 0.2);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+}
+
+.highlightIcon {
+  display: flex;
+  color: var(--accent-gold);
+}
+
+/* ═══════════════════════════════════════════
+   Comparison Grid - 과세특례
+   ═══════════════════════════════════════════ */
+.comparisonGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.comparisonCard {
+  flex: 1;
+  max-width: 320px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.comparisonCard:hover {
+  border-color: var(--border-hover);
+}
+
+.comparisonHighlight {
+  border-color: var(--accent-gold);
+  background: rgba(212, 175, 122, 0.06);
+}
+
+.comparisonLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.comparisonValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.comparisonHighlight .comparisonValue {
+  color: var(--accent-gold);
+}
+
+.comparisonDesc {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.comparisonArrow {
+  color: var(--accent-gold);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════
+   Condition Grid - 창업자금 증여
+   ═══════════════════════════════════════════ */
+.conditionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.conditionCard {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.conditionCard:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+}
+
+.conditionLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.conditionValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+/* ═══════════════════════════════════════════
+   Benefit Grid - 법인전환
+   ═══════════════════════════════════════════ */
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.benefitCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 40px 32px;
+  transition: all 0.4s ease;
+}
+
+.benefitCard:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+}
+
+.benefitNumber {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.benefitTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.benefitComparison {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: var(--bg-elevated);
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 20px;
+}
+
+.benefitBefore {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.benefitAfter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.benefitLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.benefitArrow {
+  color: var(--accent-gold);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.benefitDesc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   Two Column Grid - 부동산/재무컨설팅
+   ═══════════════════════════════════════════ */
+.twoColumnGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.columnCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 40px 32px;
+  transition: all 0.4s ease;
+}
+
+.columnCard:hover {
+  border-color: var(--border-hover);
+}
+
+.columnTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.columnTitle svg {
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+.columnList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.columnList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.columnList li svg {
+  flex-shrink: 0;
+  color: var(--accent-gold);
+  margin-top: 2px;
+}
+
+/* ═══════════════════════════════════════════
+   Responsive - Tablet
+   ═══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .processFlow {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 24px;
+  }
+
+  .processItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .processItem:last-child {
+    border-bottom: none;
+  }
+
+  .processStep {
+    flex-shrink: 0;
+  }
+
+  .processArrow {
+    display: none;
+  }
+
+  .stockBenefitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .strategyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .comparisonGrid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .comparisonCard {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .comparisonArrow {
+    transform: rotate(90deg);
+  }
+
+  .benefitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .twoColumnGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   Responsive - Mobile
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero {
+    padding: 160px 20px 0;
+  }
+
+  .heroContent {
+    padding-bottom: 48px;
+  }
+
+  .keywordContainer {
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .keywordBtn {
+    padding: 16px 20px;
+    font-size: 13px;
+    min-width: max-content;
+  }
+
+  .featureCard {
+    padding: 36px 24px;
+  }
+
+  .featureBlock {
+    margin-top: 32px;
+  }
+
+  .strategyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .taxPointGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .conditionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitComparison {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .benefitArrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+
+  .highlightBanner {
+    font-size: 16px;
+    padding: 16px 20px;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+}

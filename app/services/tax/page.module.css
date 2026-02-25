@@ -1,0 +1,534 @@
+/* ═══════════════════════════════════════════
+   세무 서비스 페이지 (Tax Service)
+   공통 스타일: ../styles/shared.module.css
+   ═══════════════════════════════════════════ */
+
+/* ── Shared Composes ── */
+.hero { composes: hero from '../styles/shared.module.css'; padding: 200px 24px 0; }
+.heroGlow { composes: heroGlow from '../styles/shared.module.css'; }
+.heroContent { composes: heroContent from '../styles/shared.module.css'; padding-bottom: 80px; }
+.tag { composes: tag from '../styles/shared.module.css'; }
+.heroTitle { composes: heroTitle from '../styles/shared.module.css'; }
+.goldText { composes: goldText from '../styles/shared.module.css'; }
+.heroDesc { composes: heroDesc from '../styles/shared.module.css'; }
+.section { composes: section from '../styles/shared.module.css'; }
+.sectionAlt { composes: sectionAlt from '../styles/shared.module.css'; }
+.container { composes: container from '../styles/shared.module.css'; }
+.sectionHeader { composes: sectionHeader from '../styles/shared.module.css'; }
+.sectionTitle { composes: sectionTitle from '../styles/shared.module.css'; }
+.sectionDesc { composes: sectionDesc from '../styles/shared.module.css'; max-width: 600px; }
+
+/* ═══════════════════════════════════════════
+   Keyword Navigation Bar
+   ═══════════════════════════════════════════ */
+.keywordNav {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(21, 21, 21, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+.keywordContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+.keywordBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.keywordBtn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: width 0.3s ease;
+}
+
+.keywordBtn:hover {
+  color: var(--text-primary);
+}
+
+.keywordBtn:hover::after {
+  width: 60%;
+}
+
+.keywordBtn svg {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.keywordBtn:hover svg {
+  opacity: 1;
+  transform: translateY(2px);
+}
+
+.keywordActive {
+  color: var(--accent-gold);
+}
+
+.keywordActive::after {
+  width: 60%;
+}
+
+.keywordActive svg {
+  opacity: 1;
+  color: var(--accent-gold);
+}
+
+/* ═══════════════════════════════════════════
+   세무기장 서비스 카드 그리드
+   ═══════════════════════════════════════════ */
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.serviceCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.4s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+}
+
+.serviceCardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.serviceCardDesc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ═══════════════════════════════════════════
+   Feature Box (미리미리 / 절세 전략)
+   ═══════════════════════════════════════════ */
+.featureBox {
+  margin-top: 48px;
+  display: flex;
+  align-items: stretch;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.featureBoxLeft {
+  flex: 1;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.featureBoxLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.featureBoxRight {
+  width: 340px;
+  flex-shrink: 0;
+  padding: 40px 36px;
+  border-left: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featureBoxTitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.featureBoxTitle strong {
+  font-weight: 700;
+}
+
+.featureBoxDesc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.featureBoxBody {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Circle Flow */
+.circleFlow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.circleStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  flex: 1;
+}
+
+.circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-subtle);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.circleFilled {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--bg-primary);
+}
+
+.circleLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.arrow {
+  position: absolute;
+  top: 36px;
+  right: -8px;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  opacity: 0.3;
+  font-size: 14px;
+}
+
+/* ═══════════════════════════════════════════
+   경정청구 (Tax Correction)
+   ═══════════════════════════════════════════ */
+.correctionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.correctionInfo {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.correctionText {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.refundGrid {
+  text-align: center;
+}
+
+.refundTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+}
+
+.refundCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.refundCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.4s ease;
+}
+
+.refundCard:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+}
+
+.refundIcon {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+.refundLabel {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.refundAmount {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+/* ═══════════════════════════════════════════
+   양도양수 (Transfer)
+   ═══════════════════════════════════════════ */
+.transferContent {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+
+.assetGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.assetTag {
+  padding: 12px 28px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 100px;
+  font-size: 15px;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background: var(--bg-card);
+}
+
+.assetTag:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.transferDesc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 700px;
+}
+
+.partnershipSection {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.partnershipTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.partnerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.partnerCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.partnerCard:hover {
+  border-color: var(--border-hover);
+}
+
+.partnerRole {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.partnerDesc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════════
+   상속증여 (Inheritance)
+   ═══════════════════════════════════════════ */
+.inheritanceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+
+.inheritanceDesc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 700px;
+}
+
+/* ═══════════════════════════════════════════
+   Responsive - Tablet
+   ═══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featureBox {
+    flex-direction: column;
+  }
+
+  .featureBoxRight {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
+    padding: 28px 32px;
+  }
+
+  .circle {
+    width: 64px;
+    height: 64px;
+  }
+
+  .arrow {
+    top: 32px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   Responsive - Mobile
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero {
+    padding: 160px 20px 0;
+  }
+
+  .heroContent {
+    padding-bottom: 48px;
+  }
+
+  .keywordContainer {
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .keywordBtn {
+    padding: 16px 20px;
+    font-size: 13px;
+    min-width: max-content;
+  }
+
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureBox {
+    margin-top: 32px;
+  }
+
+  .featureBoxLeft {
+    padding: 28px 20px;
+  }
+
+  .featureBoxRight {
+    padding: 24px 20px;
+  }
+
+  .circleFlow {
+    gap: 0;
+  }
+
+  .circle {
+    width: 56px;
+    height: 56px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .circleLabel {
+    font-size: 11px;
+  }
+
+  .refundCards {
+    grid-template-columns: 1fr;
+  }
+
+  .partnerGrid {
+    grid-template-columns: 1fr;
+  }
+}
