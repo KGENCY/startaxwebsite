@@ -202,104 +202,206 @@
 }
 
 /* ═══════════════════════════════════════════
-   Table - 벤처기업 인증 혜택
+   벤처인증 기업의 혜택 - 카드형 UI
    ═══════════════════════════════════════════ */
-.tableWrapper {
-  margin-bottom: 40px;
+.ventureBenefitSection {
+  margin-bottom: 72px;
 }
 
-.tableTitle {
-  font-size: 22px;
+.ventureBenefitHeading {
+  font-size: 23px;
   font-weight: 700;
   color: var(--text-primary);
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
-.tableContainer {
-  overflow-x: auto;
-  border-radius: 8px;
-  border: 1px solid var(--border-subtle);
+.ventureBenefitGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
+.ventureBenefitCard {
   background: var(--bg-card);
-}
-
-.table thead tr {
-  background: var(--bg-elevated);
-}
-
-.table th {
-  padding: 16px 24px;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--accent-gold);
-  text-align: left;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.table th:first-child {
-  width: 100px;
-  text-align: center;
-}
-
-.table td {
-  padding: 16px 24px;
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  border-bottom: 1px solid var(--border-subtle);
-  vertical-align: top;
-}
-
-.table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.table tbody tr:hover {
-  background: rgba(212, 175, 122, 0.03);
-}
-
-.tableCategoryCell {
-  font-weight: 700;
-  color: var(--accent-gold) !important;
-  text-align: center !important;
-  background: rgba(212, 175, 122, 0.05);
-  white-space: nowrap;
-}
-
-.tableList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 36px 28px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-
-.tableList li {
+  transition: all 0.4s ease;
   position: relative;
-  padding-left: 16px;
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--text-secondary);
 }
 
-.tableList li::before {
+.ventureBenefitCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 122, 0.35);
+  box-shadow: 0 12px 40px rgba(212, 175, 122, 0.08);
+}
+
+.ventureBenefitIconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(212, 175, 122, 0.1);
+  border: 1px solid rgba(212, 175, 122, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  margin-bottom: 20px;
+}
+
+.ventureBenefitNum {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+.ventureBenefitCategory {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.ventureBenefitDesc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   벤처 인증 유형 - 다이어그램
+   ═══════════════════════════════════════════ */
+.ventureTypeSection {
+  margin-top: 16px;
+}
+
+.ventureTypeHeading {
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.ventureTypeSubtext {
+  font-size: 15px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.ventureTypeDiagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.ventureTypeHub {
+  position: relative;
+}
+
+.ventureTypeHub::after {
   content: '';
   position: absolute;
-  left: 0;
-  top: 9px;
-  width: 5px;
-  height: 5px;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(212, 175, 122, 0.4), rgba(212, 175, 122, 0.1));
+}
+
+.ventureTypeHubInner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 36px;
+  background: rgba(212, 175, 122, 0.1);
+  border: 1px solid rgba(212, 175, 122, 0.3);
+  border-radius: 60px;
+  color: var(--accent-gold);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ventureTypeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.ventureTypeGrid::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: linear-gradient(to right, rgba(212, 175, 122, 0.1), rgba(212, 175, 122, 0.3), rgba(212, 175, 122, 0.3), rgba(212, 175, 122, 0.1));
+}
+
+.ventureTypeCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.ventureTypeCard::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: rgba(212, 175, 122, 0.3);
+}
+
+.ventureTypeCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 122, 0.3);
+  box-shadow: 0 8px 32px rgba(212, 175, 122, 0.06);
+}
+
+.ventureTypeIconWrap {
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: var(--accent-gold);
-  opacity: 0.6;
+  background: rgba(212, 175, 122, 0.08);
+  border: 1px solid rgba(212, 175, 122, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  margin: 0 auto 16px;
+}
+
+.ventureTypeTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.ventureTypeDesc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
 }
 
 /* ═══════════════════════════════════════════
@@ -829,6 +931,23 @@
   .twoColumnGrid {
     grid-template-columns: 1fr;
   }
+
+  .ventureBenefitGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ventureTypeGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .ventureTypeGrid::before {
+    display: none;
+  }
+
+  .ventureTypeCard::before {
+    display: none;
+  }
 }
 
 /* ═══════════════════════════════════════════
@@ -892,9 +1011,20 @@
     padding: 16px 20px;
   }
 
-  .table th,
-  .table td {
-    padding: 12px 16px;
-    font-size: 13px;
+  .ventureBenefitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ventureTypeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ventureTypeHub::after {
+    display: none;
+  }
+
+  .ventureTypeHubInner {
+    font-size: 16px;
+    padding: 16px 28px;
   }
 }
