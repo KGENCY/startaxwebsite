@@ -124,14 +124,14 @@
 }
 
 .serviceCardTitle {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .serviceCardDesc {
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.75;
   color: var(--text-secondary);
 }
 
@@ -160,8 +160,9 @@
 .featureBoxLabel {
   font-size: 15px;
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--accent-gold);
   letter-spacing: 0.02em;
+  opacity: 0.8;
 }
 
 .featureBoxRight {
@@ -175,11 +176,11 @@
 }
 
 .featureBoxTitle {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 400;
   color: var(--text-primary);
   margin-bottom: 14px;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .featureBoxTitle strong {
@@ -187,15 +188,15 @@
 }
 
 .featureBoxDesc {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
   margin-bottom: 8px;
 }
 
 .featureBoxBody {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* Circle Flow */
@@ -267,7 +268,7 @@
 }
 
 .correctionText {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
   color: var(--text-secondary);
 }
@@ -322,7 +323,7 @@
 }
 
 .refundLabel {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text-secondary);
 }
 
@@ -367,7 +368,7 @@
 }
 
 .transferDesc {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
   color: var(--text-secondary);
   text-align: center;
@@ -407,16 +408,16 @@
 }
 
 .partnerRole {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 12px;
 }
 
 .partnerDesc {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* ═══════════════════════════════════════════
@@ -430,7 +431,7 @@
 }
 
 .inheritanceDesc {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
   color: var(--text-secondary);
   text-align: center;

@@ -127,14 +127,14 @@
 }
 
 .featureTitle {
-  font-size: 24px;
+  font-size: 25px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 16px;
 }
 
 .featureBody {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--text-secondary);
   margin-bottom: 0;
@@ -180,15 +180,15 @@
 }
 
 .processTitle {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 6px;
 }
 
 .processDesc {
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.6;
   color: var(--text-muted);
 }
 
@@ -250,7 +250,7 @@
 
 .table td {
   padding: 16px 24px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   color: var(--text-secondary);
   border-bottom: 1px solid var(--border-subtle);
@@ -285,8 +285,8 @@
 .tableList li {
   position: relative;
   padding-left: 16px;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.7;
   color: var(--text-secondary);
 }
 
@@ -323,7 +323,7 @@
 }
 
 .noticeBox p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   color: var(--text-secondary);
   margin: 0;
@@ -382,14 +382,14 @@
 }
 
 .stockBenefitDesc {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.8;
   color: var(--text-secondary);
   margin: 0;
 }
 
 .stockBenefitSub {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-muted);
   margin-top: 8px;
 }
@@ -411,14 +411,14 @@
 }
 
 .pairCondition {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: -0.01em;
 }
 
 .pairResult {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--text-muted);
 }
@@ -448,14 +448,14 @@
 }
 
 .strategyTitle {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .strategyDesc {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-muted);
   margin: 0;
 }
@@ -490,7 +490,7 @@
 }
 
 .taxPointDesc {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   color: var(--text-secondary);
   margin: 0;
@@ -571,7 +571,7 @@
 }
 
 .comparisonDesc {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-muted);
 }
 
@@ -702,7 +702,7 @@
 }
 
 .benefitDesc {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   color: var(--text-secondary);
   margin: 0;
@@ -759,8 +759,8 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.7;
   color: var(--text-secondary);
 }
 

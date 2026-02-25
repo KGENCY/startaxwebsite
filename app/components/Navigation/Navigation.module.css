@@ -32,14 +32,14 @@
 
 .logoMain {
   font-family: var(--font-serif);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--accent-gold);
   letter-spacing: 0.05em;
 }
 
 .logoSub {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text-secondary);
   padding-left: 12px;
   border-left: 1px solid var(--border-subtle);
@@ -52,7 +52,7 @@
 }
 
 .navLink {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--text-primary);
   font-weight: 500;
   transition: color 0.3s ease;
@@ -71,7 +71,7 @@
   border: 1px solid var(--accent-gold);
   border-radius: 4px;
   color: var(--accent-gold);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
   background: transparent;
@@ -131,7 +131,7 @@
 }
 
 .mobileNavLink {
-  font-size: 24px;
+  font-size: 28px;
   color: var(--text-primary);
   font-weight: 600;
   transition: color 0.3s ease;
@@ -150,7 +150,7 @@
   border: 1px solid var(--accent-gold);
   border-radius: 4px;
   color: var(--accent-gold);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   background: transparent;
   margin-top: 20px;

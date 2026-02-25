@@ -65,7 +65,7 @@
 }
 
 .heroDesc {
-  font-size: 20px;
+  font-size: 21px;
   color: var(--text-secondary);
   line-height: 1.8;
 }
@@ -97,13 +97,23 @@
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent-gold);
+  margin: 16px auto 0;
+  opacity: 0.6;
 }
 
 .sectionDesc {
-  font-size: 18px;
+  font-size: 19px;
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.8;
   max-width: 700px;
   margin: 0 auto;
 }

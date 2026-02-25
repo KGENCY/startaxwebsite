@@ -108,13 +108,13 @@
 }
 
 .bodyText {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
   color: var(--text-secondary);
 }
 
 .subTitle {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 700;
   color: var(--text-primary);
   text-align: center;
@@ -158,8 +158,8 @@
 }
 
 .rightText {
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.7;
   color: var(--text-secondary);
 }
 
@@ -190,14 +190,14 @@
 }
 
 .strategyCardTitle {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .strategyCardDesc {
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.75;
   color: var(--text-secondary);
 }
 
@@ -256,15 +256,15 @@
 }
 
 .benefitTitle {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .benefitDesc {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.7;
   color: var(--text-muted);
 }
 
@@ -304,15 +304,15 @@
 }
 
 .msoCardTitle {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .msoCardDesc {
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.75;
   color: var(--text-secondary);
 }
 
@@ -345,7 +345,7 @@
 }
 
 .welfareMallDesc {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--text-secondary);
   margin-bottom: 36px;
@@ -363,7 +363,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
 }
 
@@ -488,14 +488,14 @@
 }
 
 .simulationStepTitle {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .simulationStepDesc {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-muted);
 }
 
@@ -585,7 +585,7 @@
 }
 
 .researchCardTitle {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text-secondary);
 }
@@ -638,14 +638,14 @@
 }
 
 .processTitle {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .processDesc {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.7;
   color: var(--text-muted);
 }
 
