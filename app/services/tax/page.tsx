@@ -1,9 +1,7 @@
-'use client';
-
 import ServiceNav from '../components/ServiceNav';
 import ServicePageNav from '../components/ServicePageNav';
+import ServiceKeywordNav from '../components/ServiceKeywordNav';
 import ServiceCTA from '../components/ServiceCTA';
-import { useActiveSection } from '../hooks/useActiveSection';
 import { Fragment } from 'react';
 import styles from './page.module.css';
 
@@ -15,8 +13,6 @@ const SECTIONS = [
 ];
 
 export default function TaxServicePage() {
-  const { activeSection, scrollTo } = useActiveSection(SECTIONS, 'bookkeeping');
-
   return (
     <>
       <ServiceNav />
@@ -36,24 +32,7 @@ export default function TaxServicePage() {
             </p>
           </div>
           <ServicePageNav currentPath="/services/tax" />
-
-          {/* Keyword Navigation */}
-          <div className={styles.keywordNav}>
-            <div className={styles.keywordContainer}>
-              {SECTIONS.map((section) => (
-                <button
-                  key={section.id}
-                  className={`${styles.keywordBtn} ${activeSection === section.id ? styles.keywordActive : ''}`}
-                  onClick={() => scrollTo(section.id)}
-                >
-                  {section.label}
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </button>
-              ))}
-            </div>
-          </div>
+          <ServiceKeywordNav sections={SECTIONS} defaultSection="bookkeeping" />
         </section>
 
         {/* 세무기장 및 운영컨설팅 */}

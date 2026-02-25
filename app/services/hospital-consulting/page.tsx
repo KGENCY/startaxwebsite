@@ -1,9 +1,7 @@
-'use client';
-
 import ServiceNav from '../components/ServiceNav';
 import ServicePageNav from '../components/ServicePageNav';
+import ServiceKeywordNav from '../components/ServiceKeywordNav';
 import ServiceCTA from '../components/ServiceCTA';
-import { useActiveSection } from '../hooks/useActiveSection';
 import styles from './page.module.css';
 
 const SECTIONS = [
@@ -16,8 +14,6 @@ const SECTIONS = [
 ];
 
 export default function HospitalConsultingPage() {
-  const { activeSection, scrollTo } = useActiveSection(SECTIONS);
-
   return (
     <>
       <ServiceNav />
@@ -37,24 +33,7 @@ export default function HospitalConsultingPage() {
             </p>
           </div>
           <ServicePageNav currentPath="/services/hospital-consulting" />
-
-          {/* Keyword Navigation */}
-          <div className={styles.keywordNav}>
-            <div className={styles.keywordContainer}>
-              {SECTIONS.map((section) => (
-                <button
-                  key={section.id}
-                  className={`${styles.keywordBtn} ${activeSection === section.id ? styles.keywordActive : ''}`}
-                  onClick={() => scrollTo(section.id)}
-                >
-                  {section.label}
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </button>
-              ))}
-            </div>
-          </div>
+          <ServiceKeywordNav sections={SECTIONS} />
         </section>
 
         {/* 세무진단/조사 */}
