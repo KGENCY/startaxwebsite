@@ -328,7 +328,7 @@ export default function TaxServicePage() {
 
                   {/* Center circle */}
                   <div className={styles.diamondCenter}>
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a2c4a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E2620" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M12 2L2 7l10 5 10-5-10-5z" />
                       <path d="M2 17l10 5 10-5" />
                       <path d="M2 12l10 5 10-5" />

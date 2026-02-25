@@ -139,8 +139,8 @@
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  border: 1.5px solid var(--border-subtle);
-  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,7 +149,7 @@
 }
 
 .circle svg {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .circleFilled {
@@ -353,19 +353,19 @@
 }
 
 .diamondBlue {
-  background: linear-gradient(135deg, #1e5299, #2a6bbd);
+  background: linear-gradient(135deg, #7A5C36, #8D6B40);
 }
 
 .diamondDark {
-  background: linear-gradient(135deg, #1a2c4a, #243a5e);
+  background: linear-gradient(135deg, #2E2620, #3A302A);
 }
 
 .diamondNavy {
-  background: linear-gradient(135deg, #1a3d6d, #1e4f8e);
+  background: linear-gradient(135deg, #55412C, #644D34);
 }
 
 .diamondMedium {
-  background: linear-gradient(135deg, #1e4585, #2860a8);
+  background: linear-gradient(135deg, #604830, #755838);
 }
 
 .diamondIconWrap {
@@ -384,7 +384,7 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: #f0f2f5;
+  background: #F2EDE6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -397,7 +397,7 @@
 .diamondCenterText {
   font-size: 9px;
   font-weight: 700;
-  color: #1a2c4a;
+  color: #2E2620;
   letter-spacing: -0.02em;
 }
 
@@ -493,7 +493,7 @@
 }
 
 .assetIconBox {
-  color: #3b7dd8;
+  color: #D4AF7A;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -538,19 +538,19 @@
 }
 
 .hexDark {
-  background: #1a2744;
+  background: #2E2620;
 }
 
 .hexBlue {
-  background: #2c6098;
+  background: #7A5C36;
 }
 
 .hexNavy {
-  background: #2a3441;
+  background: #3E3228;
 }
 
 .hexRoyal {
-  background: #1a3d7a;
+  background: #5A4530;
 }
 
 .hexLabel {
