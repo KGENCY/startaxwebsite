@@ -37,10 +37,10 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className={styles.services}>
+    <section id="expertise" className={styles.services}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <div className={styles.tag}>SERVICES</div>
+          <div className={styles.tag}>EXPERTISE</div>
           <h2 className={styles.headline}>전문성 있는 세무 서비스</h2>
         </div>
 

@@ -27,13 +27,19 @@ export default function About() {
         </div>
 
         <div className={styles.right}>
-          <div className={styles.card}>
-            <div className={styles.initial}>Y</div>
+          <div className={styles.profile}>
+            <div className={styles.photoWrapper}>
+              <img
+                src="/현웅짱_누끼.png"
+                alt="윤현웅 대표세무사"
+                className={styles.photo}
+              />
+              <div className={styles.photoGradient}></div>
+            </div>
             <div className={styles.info}>
               <div className={styles.name}>윤현웅</div>
               <div className={styles.title}>대표세무사</div>
             </div>
-            <div className={styles.accent}></div>
           </div>
         </div>
       </div>

@@ -37,9 +37,6 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('about')} className={styles.navLink}>
               About
             </button>
-            <button onClick={() => scrollToSection('services')} className={styles.navLink}>
-              Services
-            </button>
             <button onClick={() => scrollToSection('expertise')} className={styles.navLink}>
               Expertise
             </button>
@@ -71,9 +68,6 @@ export default function Navigation() {
           <div className={styles.mobileMenuContent}>
             <button onClick={() => scrollToSection('about')} className={styles.mobileNavLink}>
               About
-            </button>
-            <button onClick={() => scrollToSection('services')} className={styles.mobileNavLink}>
-              Services
             </button>
             <button onClick={() => scrollToSection('expertise')} className={styles.mobileNavLink}>
               Expertise

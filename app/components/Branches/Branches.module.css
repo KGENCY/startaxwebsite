@@ -14,7 +14,7 @@
 }
 
 .tag {
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.15em;
   color: var(--accent-gold);
   font-weight: 600;
@@ -32,7 +32,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -40,10 +40,11 @@
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
-  padding: 32px 24px;
+  padding: 32px 28px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  justify-content: space-between;
+  min-height: 180px;
   transition: all 0.4s ease;
 }
 
@@ -52,32 +53,38 @@
   border-color: var(--border-hover);
 }
 
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
 .name {
   font-size: 20px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
+.cpa {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
 .address {
   font-size: 14px;
   line-height: 1.6;
-  color: var(--text-secondary);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.detail {
-  font-size: 13px;
   color: var(--text-muted);
+  margin-bottom: auto;
 }
 
 .phone {
   font-family: var(--font-mono);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--accent-gold);
-  margin-top: 8px;
+  margin-top: 20px;
   transition: color 0.3s ease;
 }
 
@@ -115,5 +122,6 @@
 
   .card {
     padding: 28px 20px;
+    min-height: auto;
   }
 }
