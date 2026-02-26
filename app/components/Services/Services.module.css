@@ -67,7 +67,7 @@
 }
 
 .cardTitle {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--text-primary);
   display: flex;
@@ -92,7 +92,7 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.7;
   color: var(--text-secondary);
 }

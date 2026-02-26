@@ -42,7 +42,7 @@
 }
 
 .tag {
-  font-size: 15px;
+  font-size: 19px;
   letter-spacing: 0.2em;
   color: var(--accent-gold);
   font-weight: 600;
@@ -111,7 +111,7 @@
 }
 
 .sectionDesc {
-  font-size: 19px;
+  font-size: 24px;
   color: var(--text-secondary);
   line-height: 1.8;
   max-width: 700px;
@@ -148,7 +148,7 @@
   }
 
   .sectionDesc {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .sectionHeader {

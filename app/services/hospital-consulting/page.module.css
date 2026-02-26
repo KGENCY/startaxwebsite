@@ -29,13 +29,13 @@
 }
 
 .bodyText {
-  font-size: 17px;
+  font-size: 21px;
   line-height: 1.8;
   color: var(--text-secondary);
 }
 
 .subTitle {
-  font-size: 23px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--text-primary);
   text-align: center;
@@ -71,7 +71,7 @@
 
 .rightNum {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--accent-gold);
   margin-bottom: 16px;
@@ -79,7 +79,7 @@
 }
 
 .rightText {
-  font-size: 15px;
+  font-size: 21px;
   line-height: 1.7;
   color: var(--text-secondary);
 }
@@ -111,13 +111,13 @@
 }
 
 .strategyCardTitle {
-  font-size: 21px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .strategyCardDesc {
-  font-size: 15px;
+  font-size: 21px;
   line-height: 1.75;
   color: var(--text-secondary);
 }
@@ -150,7 +150,7 @@
 }
 
 .benefitLabel {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--accent-gold);
 }
@@ -168,23 +168,23 @@
 }
 
 .benefitDot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--accent-gold);
   flex-shrink: 0;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .benefitTitle {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .benefitDesc {
-  font-size: 14px;
+  font-size: 19px;
   line-height: 1.7;
   color: var(--text-muted);
 }
@@ -217,7 +217,7 @@
 
 .msoNum {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--accent-gold);
   margin-bottom: 16px;
@@ -225,14 +225,14 @@
 }
 
 .msoCardTitle {
-  font-size: 19px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .msoCardDesc {
-  font-size: 15px;
+  font-size: 21px;
   line-height: 1.75;
   color: var(--text-secondary);
 }
@@ -259,14 +259,14 @@
 }
 
 .welfareMallTitle {
-  font-size: 24px;
+  font-size: 31px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 16px;
 }
 
 .welfareMallDesc {
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.8;
   color: var(--text-secondary);
   margin-bottom: 36px;
@@ -284,7 +284,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 15px;
+  font-size: 21px;
   color: var(--text-secondary);
 }
 
@@ -324,7 +324,7 @@
 
 .deductionAmount {
   font-family: var(--font-mono);
-  font-size: 28px;
+  font-size: 34px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 8px;
@@ -332,7 +332,7 @@
 
 .deductionRate {
   font-family: var(--font-mono);
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 700;
   color: var(--accent-gold);
   line-height: 1;
@@ -340,7 +340,7 @@
 }
 
 .deductionLabel {
-  font-size: 14px;
+  font-size: 19px;
   color: var(--text-muted);
   font-weight: 500;
 }
@@ -362,7 +362,7 @@
   padding: 20px 32px;
   background: var(--bg-elevated);
   border-bottom: 1px solid var(--border-subtle);
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 600;
   color: var(--text-secondary);
   text-align: center;
@@ -394,11 +394,11 @@
 
 .simulationStepNum {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--accent-gold);
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   border: 1px solid var(--accent-gold);
   display: flex;
@@ -409,20 +409,20 @@
 }
 
 .simulationStepTitle {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .simulationStepDesc {
-  font-size: 14px;
+  font-size: 19px;
   color: var(--text-muted);
 }
 
 .simulationPlus {
   font-family: var(--font-mono);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--accent-gold);
   flex-shrink: 0;
@@ -439,13 +439,13 @@
 }
 
 .simulationResultLabel {
-  font-size: 16px;
+  font-size: 22px;
   color: var(--text-secondary);
 }
 
 .simulationResultAmount {
   font-family: var(--font-mono);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--text-primary);
 }
@@ -462,14 +462,14 @@
 }
 
 .simulationRefundLabel {
-  font-size: 16px;
+  font-size: 22px;
   color: var(--accent-gold);
   font-weight: 500;
 }
 
 .simulationRefundAmount {
   font-family: var(--font-mono);
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   color: var(--accent-gold);
 }
@@ -506,7 +506,7 @@
 }
 
 .researchCardTitle {
-  font-size: 15px;
+  font-size: 21px;
   font-weight: 600;
   color: var(--text-secondary);
 }
@@ -539,11 +539,11 @@
 
 .processStep {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--accent-gold);
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   border: 1px solid var(--accent-gold);
   display: flex;
@@ -560,13 +560,13 @@
 }
 
 .processTitle {
-  font-size: 17px;
+  font-size: 23px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .processDesc {
-  font-size: 14px;
+  font-size: 19px;
   line-height: 1.7;
   color: var(--text-muted);
 }

@@ -25,7 +25,7 @@
   padding: 12px 28px;
   border: 1px solid var(--border-subtle);
   border-radius: 100px;
-  font-size: 15px;
+  font-size: 26px;
   color: var(--text-primary);
   font-weight: 500;
   transition: all 0.3s ease;
@@ -38,7 +38,7 @@
 }
 
 .desc {
-  font-size: 17px;
+  font-size: 26px;
   line-height: 1.8;
   color: var(--text-secondary);
   text-align: center;
@@ -51,7 +51,7 @@
 }
 
 .partnershipTitle {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--accent-gold);
   text-align: center;
@@ -124,7 +124,7 @@
 }
 
 .diamondCenterText {
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 700;
   color: #2E2620;
   letter-spacing: -0.02em;
@@ -136,7 +136,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 17px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--text-primary);
   white-space: nowrap;
@@ -167,8 +167,8 @@
   .diamondCard { border-radius: 16px; }
   .diamondCenter { width: 80px; height: 80px; }
   .diamondCenter svg { width: 20px; height: 20px; }
-  .diamondCenterText { font-size: 7px; }
-  .diamondLabel { font-size: 13px; }
+  .diamondCenterText { font-size: 11px; }
+  .diamondLabel { font-size: 21px; }
   .labelLine { width: 20px; }
   .labelTopLeft, .labelBottomLeft { left: -4px; }
   .labelTopRight, .labelBottomRight { right: -4px; }

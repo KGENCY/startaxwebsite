@@ -31,13 +31,13 @@
 }
 
 .serviceCardTitle {
-  font-size: 21px;
+  font-size: 31px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .serviceCardDesc {
-  font-size: 15px;
+  font-size: 25px;
   line-height: 1.75;
   color: var(--text-secondary);
 }
@@ -63,7 +63,7 @@
 }
 
 .featureBoxLabel {
-  font-size: 15px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--accent-gold);
   letter-spacing: 0.02em;
@@ -81,7 +81,7 @@
 }
 
 .featureBoxTitle {
-  font-size: 19px;
+  font-size: 29px;
   font-weight: 400;
   color: var(--text-primary);
   margin-bottom: 14px;
@@ -93,13 +93,13 @@
 }
 
 .featureBoxDesc {
-  font-size: 15px;
+  font-size: 25px;
   color: var(--text-secondary);
   margin-bottom: 8px;
 }
 
 .featureBoxBody {
-  font-size: 15px;
+  font-size: 25px;
   color: var(--text-muted);
   line-height: 1.7;
 }
@@ -147,7 +147,7 @@
 }
 
 .circleLabel {
-  font-size: 12px;
+  font-size: 21px;
   font-weight: 600;
   color: var(--text-secondary);
   text-align: center;
@@ -187,5 +187,5 @@
   .circle { width: 56px; height: 56px; }
   .circle svg { width: 18px; height: 18px; }
   .arrow { display: none; }
-  .circleLabel { font-size: 11px; }
+  .circleLabel { font-size: 17px; }
 }

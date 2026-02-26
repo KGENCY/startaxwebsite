@@ -15,7 +15,7 @@
 }
 
 .desc {
-  font-size: 17px;
+  font-size: 26px;
   line-height: 1.8;
   color: var(--text-secondary);
   text-align: center;
@@ -50,7 +50,7 @@
 }
 
 .assetIconLabel {
-  font-size: 16px;
+  font-size: 27px;
   font-weight: 700;
   color: var(--text-primary);
 }
@@ -100,7 +100,7 @@
 .hexRoyal { background: #5A4530; }
 
 .hexLabel {
-  font-size: 14px;
+  font-size: 25px;
   font-weight: 600;
   color: var(--text-primary);
   white-space: nowrap;
@@ -150,5 +150,5 @@
   .hexFlow { flex-wrap: wrap; gap: 24px; justify-content: center; }
   .hexagon { width: 76px; height: 76px; }
   .hexConnector { display: none; }
-  .hexLabel { font-size: 12px; }
+  .hexLabel { font-size: 20px; }
 }
