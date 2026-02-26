@@ -12,6 +12,7 @@ interface Branch {
   phone: string;
   address: string;
   photo: string | null;
+  link: string;
 }
 
 const branchData: Branch[] = [
@@ -20,60 +21,66 @@ const branchData: Branch[] = [
     name: '강남',
     taxAgent: '조준섭',
     title: '세무사',
-    slogan: '',
+    slogan: '<strong>국세청 14년 경력!</strong> 어떤 세무사와 함께 하느냐에 따라<br/>사업의 미래가 달라집니다.',
     phone: '02-567-2395',
     address: '서울 강남구 강남대로84길 23',
     photo: '/branches/gangnam.png',
+    link: 'https://blog.naver.com/nts_star2',
   },
   {
     id: 'namyangju',
     name: '남양주',
-    taxAgent: '김명학',
+    taxAgent: '김명하',
     title: '세무사',
-    slogan: '',
-    phone: '0507-0464-2178',
+    slogan: '<strong>일등세무 해결사!</strong><br/>김명하 입니다.',
+    phone: '010-5749-7511',
     address: '경기 남양주시 다산지금로 202',
     photo: '/branches/namyangju.png',
+    link: 'https://blog.naver.com/audgkehdrm',
   },
   {
     id: 'bucheon',
     name: '부천',
     taxAgent: '김용삼',
     title: '세무사',
-    slogan: '',
+    slogan: '첫 마음 그대로.<br/><strong>고객과 함께</strong>하겠습니다.',
     phone: '032-1899-2395',
     address: '경기 부천시 중동 1111',
     photo: '/branches/bucheon.png',
+    link: 'https://blog.naver.com/tax1899',
   },
   {
     id: 'bucheonnam',
     name: '부천남지',
     taxAgent: '이하윤',
     title: '세무사',
-    slogan: '',
+    slogan: '세법에 대해 조금이라도<br/><strong>쉽게 알 수 있도록 노력</strong>하고 있습니다.',
     phone: '032-342-2395',
     address: '경기 부천시 목감동 745-5',
     photo: '/branches/bucheonnam.png',
+    link: '',
   },
   {
     id: 'yeouido',
     name: '여의도',
-    taxAgent: '감연지',
+    taxAgent: '강연지',
     title: '세무사',
-    slogan: '',
+    slogan: '<strong>성실함과 노력</strong>으로 증명하겠습니다.',
     phone: '0507-1378-2360',
     address: '서울 영등포구 당산로 171-173',
     photo: '/branches/yeouido.png',
+    link: 'https://blog.naver.com/jeetax81',
   },
   {
     id: 'suwon',
     name: '수원',
     taxAgent: '김동현',
     title: '세무사',
-    slogan: '',
+    slogan: '빠르게 변화하는 세법에<br/><strong>발맞춰 연구하며, 대응</strong>하고<br/>가능성을 제시합니다.',
     phone: '0507-1425-3369',
     address: '경기 수원시 영통로 41-1',
     photo: '/branches/suwon.png',
+    link: 'https://blog.naver.com/taxst3330',
   },
 ];
 
@@ -212,10 +219,11 @@ export default function Branches() {
                 </h3>
 
                 {selectedBranch.slogan && (
-                  <p className={styles.modalSlogan}>{selectedBranch.slogan}</p>
+                  <p
+                    className={styles.modalSlogan}
+                    dangerouslySetInnerHTML={{ __html: selectedBranch.slogan }}
+                  />
                 )}
-
-                <div className={styles.modalDivider}></div>
 
                 <a
                   href={`tel:${selectedBranch.phone.replace(/[^0-9]/g, '')}`}
@@ -235,12 +243,16 @@ export default function Branches() {
                   {selectedBranch.address}
                 </p>
 
-                <button
-                  className={styles.modalCta}
-                  onClick={scrollToContact}
-                >
-                  상담 신청하기
-                </button>
+                {selectedBranch.link && (
+                  <a
+                    href={selectedBranch.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.modalCta}
+                  >
+                    자세히 알아보기
+                  </a>
+                )}
               </div>
             </div>
           </div>
