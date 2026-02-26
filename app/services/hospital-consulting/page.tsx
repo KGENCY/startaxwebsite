@@ -49,7 +49,7 @@ export default function HospitalConsultingPage() {
 
             <div className={styles.contentBlock}>
               <p className={styles.bodyText}>
-                모든 납세자는 납세자 권리헌장에 의해 권리보호를 요청할 수 있습니다.
+                모든 납세자는 납세자 권리헌장에 의해 권리보호를 요청할 수 있습니다.<br />
                 세무조사는 복잡하고 전문적인 영역이기에, 전문가의 체계적인 대응이 필수적입니다.
               </p>
             </div>
@@ -105,8 +105,8 @@ export default function HospitalConsultingPage() {
 
             <div className={styles.contentBlock}>
               <p className={styles.bodyText}>
-                기업 내에서 근로자의 복지 증진을 위해 조성된 기금입니다.
-                회사가 일정 금액을 출연하거나 이익금의 일부를 기금으로 전환하여 조성되며,
+                기업 내에서 근로자의 복지 증진을 위해 조성된 기금입니다.<br />
+                회사가 일정 금액을 출연하거나 이익금의 일부를 기금으로 전환하여 조성되며,<br />
                 근로자 복리후생 향상을 위해 사용됩니다.
               </p>
             </div>
@@ -173,8 +173,8 @@ export default function HospitalConsultingPage() {
 
             <div className={styles.contentBlock}>
               <p className={styles.bodyText}>
-                병원장님과 가족의 지분으로 설립된, 병의원에 의료행위 및 행정관리에 대한
-                각종 서비스를 지원하는 병의원 경영지원 기업입니다.
+                병원장님과 가족의 지분으로 설립된, 병의원에 의료행위 및 행정관리에 대한<br />
+                각종 서비스를 지원하는 병의원 경영지원 기업입니다.<br />
                 MSO를 통해 합법적인 절세와 체계적인 경영 지원이 가능합니다.
               </p>
             </div>
@@ -217,9 +217,9 @@ export default function HospitalConsultingPage() {
               <div className={styles.welfareMallCard}>
                 <h3 className={styles.welfareMallTitle}>선택적 복지서비스</h3>
                 <p className={styles.welfareMallDesc}>
-                  병의원도 중소기업에서도 대기업과 동일하게 선택적 복지서비스인
-                  복지몰 서비스를 운영할 수 있습니다. 직원들에게 다양한 복지 혜택을
-                  제공하며, 기업은 비용 절감과 세제 혜택을 동시에 누릴 수 있습니다.
+                  병의원도 중소기업에서도 대기업과 동일하게 선택적 복지서비스인<br />
+                  복지몰 서비스를 운영할 수 있습니다.
+                  직원들에게 다양한 복지 혜택을 제공하며, 기업은 비용 절감과 세제 혜택을 동시에 누릴 수 있습니다.
                 </p>
                 <div className={styles.welfareMallFeatures}>
                   {['명절 선물 간편 배송', '선택적 복지 포인트', '다양한 제휴 혜택', '비용 처리 간소화'].map((feature, index) => (
@@ -243,17 +243,15 @@ export default function HospitalConsultingPage() {
               <div className={styles.tag}>VENTURE INVESTMENT</div>
               <h2 className={styles.sectionTitle}>벤처투자 소득공제</h2>
               <p className={styles.sectionDesc}>
-                연간 3천만원 100%, 연간 5천만원 70%<br />
-                소득공제 가능한 효과적인 세테크
+                연간 3천만원 100%, 연간 5천만원 70% 소득공제 가능한 효과적인 세테크
               </p>
             </div>
 
             <div className={styles.contentBlock}>
               <p className={styles.bodyText}>
-                묻지마 투자가 아닌, 안전한 벤처기업을 선정하여 최소화된 리스크를 통해
-                안전하게 세금을 공제받을 수 있는 솔루션을 제공합니다.
-                조세특례법에 따라 개인이 벤처기업에 투자할 때 일정 금액에 대해
-                소득세를 공제해주는 제도입니다.
+                묻지마 투자가 아닌, 안전한 벤처기업을 선정하여 최소화된 리스크를 통해<br />
+                안전하게 세금을 공제받을 수 있는 솔루션을 제공합니다.<br />
+                조세특례법에 따라 개인이 벤처기업에 투자할 때 일정 금액에 대해 소득세를 공제해주는 제도입니다.
               </p>
             </div>
 
@@ -325,8 +323,7 @@ export default function HospitalConsultingPage() {
 
             <div className={styles.contentBlock}>
               <p className={styles.bodyText}>
-                여러 설립요건에 충족하여 기업부설연구소를 설립하면
-                세금관점에서 여러 혜택을 받을 수 있으며,
+                여러 설립요건에 충족하여 기업부설연구소를 설립하면 세금관점에서 여러 혜택을 받을 수 있으며,<br />
                 이러한 관점의 컨설팅을 통해 설립 실무를 대행합니다.
               </p>
             </div>

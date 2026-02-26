@@ -2,9 +2,11 @@
 
 import { useEffect, useRef } from 'react';
 import styles from './Hero.module.css';
+import { useConsultation } from '../../context/ConsultationContext';
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { openModal } = useConsultation();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -120,9 +122,9 @@ export default function Hero() {
           10년 이상의 전문가들과 원스톱으로 함께합니다.
         </p>
 
-        <a href="tel:02-423-7110" className={styles.cta}>
+        <button onClick={openModal} className={styles.cta}>
           컨설팅 신청 →
-        </a>
+        </button>
 
         <div className={styles.stats}>
           <div className={styles.stat}>

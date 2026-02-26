@@ -58,6 +58,7 @@
   line-height: 1.8;
   color: var(--text-secondary);
   margin-bottom: 0;
+  word-break: keep-all;
 }
 
 /* ═══════════════════════════════════════════
@@ -110,6 +111,7 @@
   font-size: 14px;
   line-height: 1.6;
   color: var(--text-muted);
+  word-break: keep-all;
 }
 
 .processArrow {
@@ -193,6 +195,7 @@
   line-height: 1.8;
   color: var(--text-secondary);
   margin: 0;
+  word-break: keep-all;
 }
 
 /* ═══════════════════════════════════════════
@@ -322,6 +325,7 @@
   line-height: 1.7;
   color: var(--text-muted);
   margin: 0;
+  word-break: keep-all;
 }
 
 /* ═══════════════════════════════════════════
@@ -349,6 +353,7 @@
   line-height: 1.7;
   color: var(--text-secondary);
   margin: 0;
+  word-break: keep-all;
 }
 
 /* ═══════════════════════════════════════════
@@ -408,6 +413,7 @@
   line-height: 1.8;
   color: var(--text-secondary);
   margin: 0;
+  word-break: keep-all;
 }
 
 .stockBenefitSub {
@@ -443,6 +449,7 @@
   font-size: 14px;
   line-height: 1.6;
   color: var(--text-muted);
+  word-break: keep-all;
 }
 
 /* ═══════════════════════════════════════════
@@ -480,6 +487,7 @@
   font-size: 14px;
   color: var(--text-muted);
   margin: 0;
+  word-break: keep-all;
 }
 
 /* ═══════════════════════════════════════════
@@ -516,6 +524,7 @@
   line-height: 1.7;
   color: var(--text-secondary);
   margin: 0;
+  word-break: keep-all;
 }
 
 /* ═══════════════════════════════════════════
@@ -595,6 +604,7 @@
 .comparisonDesc {
   font-size: 15px;
   color: var(--text-muted);
+  word-break: keep-all;
 }
 
 .comparisonArrow {
@@ -728,6 +738,7 @@
   line-height: 1.7;
   color: var(--text-secondary);
   margin: 0;
+  word-break: keep-all;
 }
 
 /* ═══════════════════════════════════════════
@@ -784,6 +795,7 @@
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-secondary);
+  word-break: keep-all;
 }
 
 .columnList li svg {

@@ -21,9 +21,7 @@ export default function CorrectionSection() {
         <div className={styles.content}>
           <div className={styles.info}>
             <p className={styles.text}>
-              납세자가 세금을 신고하거나 납부한 후, 잘못된 점이 있거나 과다하게 납부한 경우,
-              이를 정정하여 환급받기 위해 세무서에 신청하는 것을 말하며 이를 통해 실제로
-              환급을 받게 되거나 부족세액을 징수하지 않게 됩니다.
+              납세자가 세금을 신고하거나 납부한 후, 잘못된 점이 있거나 과다하게 납부한 경우, 이를 정정하여 환급받기 위해 세무서에 신청하는 것을 말하며 이를 통해 실제로 환급을 받게 되거나 부족세액을 징수하지 않게 됩니다.
             </p>
           </div>
 

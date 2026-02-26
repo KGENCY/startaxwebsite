@@ -184,7 +184,7 @@ export default function InheritanceSection() {
           </div>
 
           <p className={styles.desc}>
-            정책 변동, 세율 변경, 자산의 변동과 상속·증여될 자녀의 성장 등
+            정책 변동, 세율 변경, 자산의 변동과 상속·증여될 자녀의 성장 등<br />
             많은 변화를 고려하여 최적의 세금으로 컨설팅 해드립니다.
           </p>
         </div>

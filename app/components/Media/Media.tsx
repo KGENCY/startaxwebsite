@@ -2,9 +2,9 @@ import styles from './Media.module.css';
 
 export default function Media() {
   const videos = [
-    { title: '병의원 절세 전략' },
-    { title: '법인 전환 가이드' },
-    { title: '세무조사 대응법' },
+    { title: '가족 법인을 설립하면 유리한 점', thumbnail: '/media/family-corporation.png', link: 'https://youtu.be/bmxqYee47sk?si=yYjKN5IIzfxrajqu' },
+    { title: '벤처 투자 소득공제를 통한 절세', thumbnail: '/media/venture-investment.png', link: 'https://youtu.be/y8NB2TRzyn0?si=hW2el3IARYGoaFeE' },
+    { title: '기부금 경비 처리 간단 요약', thumbnail: '/media/donation-expense.png', link: 'https://youtu.be/t1_QlZb_61E?si=-ONpwbtkGNMZ9s_Q' },
   ];
 
   return (
@@ -19,12 +19,17 @@ export default function Media() {
           {videos.map((video, index) => (
             <a
               key={index}
-              href="https://www.youtube.com/@startaxaccounting"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={video.link}
+              target={video.link !== '#' ? '_blank' : undefined}
+              rel={video.link !== '#' ? 'noopener noreferrer' : undefined}
               className={styles.card}
             >
               <div className={styles.thumbnail}>
+                <img
+                  src={video.thumbnail}
+                  alt={video.title}
+                  className={styles.thumbnailImage}
+                />
                 <svg className={styles.playIcon} width="64" height="64" viewBox="0 0 64 64" fill="none">
                   <circle cx="32" cy="32" r="32" fill="var(--accent-gold)" opacity="0.9" />
                   <path

@@ -11,17 +11,17 @@
 .serviceGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 
 .serviceCard {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
-  padding: 40px 28px;
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   transition: all 0.4s ease;
 }
 
@@ -31,20 +31,21 @@
 }
 
 .serviceCardTitle {
-  font-size: 31px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .serviceCardDesc {
-  font-size: 25px;
-  line-height: 1.75;
+  font-size: 14px;
+  line-height: 1.7;
   color: var(--text-secondary);
+  word-break: keep-all;
 }
 
 /* Feature Box */
 .featureBox {
-  margin-top: 48px;
+  margin-top: 40px;
   display: flex;
   align-items: stretch;
   background: var(--bg-card);
@@ -55,25 +56,25 @@
 
 .featureBoxLeft {
   flex: 1;
-  padding: 40px 32px;
+  padding: 32px 28px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .featureBoxLabel {
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--accent-gold);
-  letter-spacing: 0.02em;
-  opacity: 0.8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .featureBoxRight {
-  width: 340px;
+  width: 320px;
   flex-shrink: 0;
-  padding: 40px 36px;
+  padding: 32px 28px;
   border-left: 1px solid var(--border-subtle);
   display: flex;
   flex-direction: column;
@@ -81,11 +82,12 @@
 }
 
 .featureBoxTitle {
-  font-size: 29px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--text-primary);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   line-height: 1.5;
+  word-break: keep-all;
 }
 
 .featureBoxTitle strong {
@@ -93,15 +95,17 @@
 }
 
 .featureBoxDesc {
-  font-size: 25px;
+  font-size: 14px;
   color: var(--text-secondary);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  word-break: keep-all;
 }
 
 .featureBoxBody {
-  font-size: 25px;
+  font-size: 14px;
   color: var(--text-muted);
   line-height: 1.7;
+  word-break: keep-all;
 }
 
 /* Circle Flow */
@@ -114,14 +118,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   position: relative;
   flex: 1;
 }
 
 .circle {
-  width: 72px;
-  height: 72px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   border: 1.5px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.08);
@@ -133,6 +137,8 @@
 }
 
 .circle svg {
+  width: 18px;
+  height: 18px;
   opacity: 0.85;
 }
 
@@ -147,8 +153,8 @@
 }
 
 .circleLabel {
-  font-size: 21px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 500;
   color: var(--text-secondary);
   text-align: center;
   white-space: nowrap;
@@ -156,12 +162,12 @@
 
 .arrow {
   position: absolute;
-  top: 36px;
-  right: -8px;
+  top: 26px;
+  right: -6px;
   transform: translateY(-50%);
   color: var(--text-muted);
   opacity: 0.3;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* Tablet */
@@ -172,20 +178,22 @@
     width: 100%;
     border-left: none;
     border-top: 1px solid var(--border-subtle);
-    padding: 28px 32px;
+    padding: 24px 28px;
   }
-  .circle { width: 64px; height: 64px; }
-  .arrow { top: 32px; }
+  .circle { width: 48px; height: 48px; }
+  .arrow { top: 24px; }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .serviceGrid { grid-template-columns: 1fr; }
-  .featureBox { margin-top: 32px; }
-  .featureBoxLeft { padding: 28px 20px; }
-  .featureBoxRight { padding: 24px 20px; }
-  .circle { width: 56px; height: 56px; }
-  .circle svg { width: 18px; height: 18px; }
+  .serviceGrid { grid-template-columns: 1fr; gap: 16px; }
+  .serviceCard { padding: 24px 20px; }
+  .featureBox { margin-top: 28px; }
+  .featureBoxLeft { padding: 24px 20px; }
+  .featureBoxRight { padding: 20px; }
+  .featureBoxTitle { font-size: 18px; }
+  .circle { width: 44px; height: 44px; }
+  .circle svg { width: 16px; height: 16px; }
   .arrow { display: none; }
-  .circleLabel { font-size: 17px; }
+  .circleLabel { font-size: 11px; }
 }

@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import styles from './Navigation.module.css';
+import { useConsultation } from '../../context/ConsultationContext';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { openModal } = useConsultation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,9 +49,9 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('contact')} className={styles.navLink}>
               Contact
             </button>
-            <a href="tel:02-423-7110" className={styles.ctaButton}>
+            <button onClick={openModal} className={styles.ctaButton}>
               상담신청
-            </a>
+            </button>
           </div>
 
           <button
@@ -79,9 +81,9 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('contact')} className={styles.mobileNavLink}>
               Contact
             </button>
-            <a href="tel:02-423-7110" className={styles.mobileCtaButton}>
+            <button onClick={() => { setIsMobileMenuOpen(false); openModal(); }} className={styles.mobileCtaButton}>
               상담신청
-            </a>
+            </button>
           </div>
         </div>
       )}

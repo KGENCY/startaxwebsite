@@ -121,7 +121,7 @@ export default function BookkeepingSection() {
           <div className={styles.tag}>BOOKKEEPING & CONSULTING</div>
           <h2 className={styles.sectionTitle}>세무기장 및 운영컨설팅</h2>
           <p className={styles.sectionDesc}>
-            병의원에 특화된 체계적인 세무 관리로 안정적인 경영 환경을 만들어 드립니다
+            병의원에 특화된 체계적인 세무 관리로<br />안정적인 경영 환경을 만들어 드립니다
           </p>
         </div>
 

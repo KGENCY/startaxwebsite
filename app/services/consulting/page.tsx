@@ -42,9 +42,8 @@ export default function ConsultingPage() {
               <div className={styles.tag}>VENTURE CERTIFICATION</div>
               <h2 className={styles.sectionTitle}>벤처기업 인증</h2>
               <p className={styles.sectionDesc}>
-                획기적인 기술과 성장 가능성이 높다고 판단되어 벤처기업으로 인증받게 되면
-                다양한 세제 혜택과 보증기관들로부터 가점을 부여받게 되며,
-                이로 인해 각종 혜택들을 받을 수 있어 사업을 운영할 수 있습니다.
+                획기적인 기술과 성장 가능성이 높다고 판단되어<br />
+                벤처기업으로 인증받게 되면 다양한 세제 혜택과 보증기관들로부터 가점을 부여받게 되며, 이로 인해 각종 혜택들을 받을 수 있어 사업을 운영할 수 있습니다.
               </p>
             </div>
 
@@ -220,8 +219,9 @@ export default function ConsultingPage() {
               <div className={styles.tag}>TREASURY STOCK</div>
               <h2 className={styles.sectionTitle}>자기주식 처분</h2>
               <p className={styles.sectionDesc}>
-                자기주식 취득 시 적법한 절차에 따라 진행한다면 주주의 권리 확보는 물론
-                누적된 가지급금과 미처분 이익잉여금과 같은 경영 리스크 해결 비용을 상당 부분 절감할 수 있습니다.
+                자기주식 취득 시 적법한 절차에 따라 진행한다면 주주의 권리 확보는 물론<br />
+                누적된 가지급금과 미처분 이익잉여금과 같은 경영 리스크 해결 비용을<br />
+                상당 부분 절감할 수 있습니다.
               </p>
             </div>
 
@@ -357,8 +357,8 @@ export default function ConsultingPage() {
                 <div className={styles.featureNumber}>01</div>
                 <h3 className={styles.featureTitle}>가업상속 공제</h3>
                 <p className={styles.featureBody}>
-                  10년 이상된 중소기업을 배우자나 자녀에게 승계하시고자 한다면,
-                  이때 최대 500억까지 가업상속재산가액의 100%를 상속 공제하여
+                  10년 이상된 중소기업을 배우자나 자녀에게 승계하시고자 한다면,<br />
+                  이때 최대 500억까지 가업상속재산가액의 100%를 상속 공제하여<br />
                   자연스럽게 가업을 이어나갈 수 있도록 지원하는 제도입니다.
                 </p>
                 <div className={styles.processFlow}>
@@ -394,8 +394,8 @@ export default function ConsultingPage() {
                 <div className={styles.featureNumber}>02</div>
                 <h3 className={styles.featureTitle}>가업승계 주식 증여세 과세특례제도</h3>
                 <p className={styles.featureBody}>
-                  10년 이상된 중소기업의 60대 이상 경영자가 다른 사람에게 증여를 할 경우에는
-                  5억을 공제하고 10% 낮은 세율로 증여세를 부과하는 제도입니다.
+                  10년 이상된 중소기업의 60대 이상 경영자가 다른 사람에게 증여를 할 경우에는<br />
+                  5억을 공제하고 10% 낮은 세율로 증여세를 부과하는 제도입니다.<br />
                   이 제도는 사전 증여도 가능합니다.
                 </p>
                 <div className={styles.comparisonGrid}>
@@ -425,9 +425,9 @@ export default function ConsultingPage() {
                 <div className={styles.featureNumber}>03</div>
                 <h3 className={styles.featureTitle}>창업자금 증여세 과세특례제도</h3>
                 <p className={styles.featureBody}>
-                  18세 이상 자녀가 60세 이상 부모에게 자금을 받아 창업을 한다면
-                  세제혜택을 받을 수 있는 제도입니다. 사업 자금 준비와 동시에
-                  상속세 부담을 완화할 수 있습니다.
+                  18세 이상 자녀가 60세 이상 부모에게 자금을 받아 창업을 한다면<br />
+                  세제혜택을 받을 수 있는 제도입니다.<br />
+                  사업 자금 준비와 동시에 상속세 부담을 완화할 수 있습니다.
                 </p>
                 <div className={styles.conditionGrid}>
                   {[
@@ -453,7 +453,8 @@ export default function ConsultingPage() {
               <div className={styles.tag}>INCORPORATION</div>
               <h2 className={styles.sectionTitle}>법인전환</h2>
               <p className={styles.sectionDesc}>
-                개인사업자가 사업의 조직형태를 법인 사업자의 형태로 변경하는 것을 말합니다.
+                개인사업자가 사업의 조직형태를<br />
+                법인 사업자의 형태로 변경하는 것을 말합니다.
                 기존의 권리와 의무 등을 그대로 이양하여 영업을 지속하고자 할 때 법인전환을 하게 됩니다.
               </p>
             </div>

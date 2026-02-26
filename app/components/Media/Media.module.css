@@ -64,6 +64,20 @@
   overflow: hidden;
 }
 
+.thumbnailImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .thumbnailImage {
+  transform: scale(1.05);
+}
+
 .thumbnail::before {
   content: '';
   position: absolute;
@@ -71,12 +85,18 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle, rgba(212, 175, 122, 0.05), transparent 70%);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.card:hover .thumbnail::before {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .playIcon {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   transition: transform 0.4s ease;
 }
 

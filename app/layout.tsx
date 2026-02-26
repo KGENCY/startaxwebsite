@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ConsultationProvider } from "./context/ConsultationContext";
 
 export const metadata: Metadata = {
   title: "세무법인 스타택스 | 병의원 전문 세무 컨설팅",
@@ -33,7 +34,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {children}
+        <ConsultationProvider>
+          {children}
+        </ConsultationProvider>
       </body>
     </html>
   );

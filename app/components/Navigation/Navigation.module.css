@@ -81,6 +81,7 @@
   font-weight: 600;
   transition: all 0.3s ease;
   background: transparent;
+  cursor: pointer;
 }
 
 .ctaButton:hover {
@@ -160,6 +161,7 @@
   font-weight: 600;
   background: transparent;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {

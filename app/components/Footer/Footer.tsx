@@ -1,13 +1,18 @@
+'use client';
+
 import styles from './Footer.module.css';
+import { useConsultation } from '../../context/ConsultationContext';
 
 export default function Footer() {
+  const { openModal } = useConsultation();
+
   return (
     <footer className={styles.footer}>
       <div className={styles.cta}>
         <h2 className={styles.ctaHeadline}>세무 고민, 지금 바로 상담하세요.</h2>
-        <a href="tel:02-423-7110" className={styles.ctaButton}>
-          무료 상담 신청하기
-        </a>
+        <button onClick={openModal} className={styles.ctaButton}>
+          전문가 상담 신청하기
+        </button>
         <div className={styles.ctaPhone}>또는 전화: 02-423-7110</div>
       </div>
 
