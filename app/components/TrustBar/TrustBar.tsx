@@ -4,7 +4,7 @@ export default function TrustBar() {
   const items = [
     '병의원 전문 세무법인',
     '국세청 출신 전문가',
-    '수도권 4개 지점',
+    '수도권 7개 지점',
     '원스톱 토탈 서비스',
   ];
 
