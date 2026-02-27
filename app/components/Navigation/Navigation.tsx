@@ -4,6 +4,13 @@ import { useState, useEffect } from 'react';
 import styles from './Navigation.module.css';
 import { useConsultation } from '../../context/ConsultationContext';
 
+const NAV_ITEMS = [
+  { id: 'about', label: 'About' },
+  { id: 'expertise', label: 'Expertise' },
+  { id: 'media', label: 'Media' },
+  { id: 'contact', label: 'Contact' },
+];
+
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,7 +21,7 @@ export default function Navigation() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -37,18 +44,11 @@ export default function Navigation() {
           </div>
 
           <div className={styles.desktopMenu}>
-            <button onClick={() => scrollToSection('about')} className={styles.navLink}>
-              About
-            </button>
-            <button onClick={() => scrollToSection('expertise')} className={styles.navLink}>
-              Expertise
-            </button>
-            <button onClick={() => scrollToSection('media')} className={styles.navLink}>
-              Media
-            </button>
-            <button onClick={() => scrollToSection('contact')} className={styles.navLink}>
-              Contact
-            </button>
+            {NAV_ITEMS.map((item) => (
+              <button key={item.id} onClick={() => scrollToSection(item.id)} className={styles.navLink}>
+                {item.label}
+              </button>
+            ))}
             <button onClick={openModal} className={styles.ctaButton}>
               상담신청
             </button>
@@ -69,18 +69,11 @@ export default function Navigation() {
       {isMobileMenuOpen && (
         <div className={styles.mobileMenu}>
           <div className={styles.mobileMenuContent}>
-            <button onClick={() => scrollToSection('about')} className={styles.mobileNavLink}>
-              About
-            </button>
-            <button onClick={() => scrollToSection('expertise')} className={styles.mobileNavLink}>
-              Expertise
-            </button>
-            <button onClick={() => scrollToSection('media')} className={styles.mobileNavLink}>
-              Media
-            </button>
-            <button onClick={() => scrollToSection('contact')} className={styles.mobileNavLink}>
-              Contact
-            </button>
+            {NAV_ITEMS.map((item) => (
+              <button key={item.id} onClick={() => scrollToSection(item.id)} className={styles.mobileNavLink}>
+                {item.label}
+              </button>
+            ))}
             <button onClick={() => { setIsMobileMenuOpen(false); openModal(); }} className={styles.mobileCtaButton}>
               상담신청
             </button>

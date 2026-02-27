@@ -20,37 +20,27 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
     privacyAgreed: false,
   });
 
-  // ESC 키로 닫기
   useEffect(() => {
+    if (!isOpen) {
+      const timer = setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: '', company: '', phone: '', category: '', message: '', privacyAgreed: false });
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
-    if (isOpen) {
-      document.addEventListener('keydown', handleEsc);
-      document.body.style.overflow = 'hidden';
-    }
+
+    document.addEventListener('keydown', handleEsc);
+    document.body.style.overflow = 'hidden';
+
     return () => {
       document.removeEventListener('keydown', handleEsc);
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
     };
   }, [isOpen, onClose]);
-
-  // 모달 닫을 때 상태 초기화
-  useEffect(() => {
-    if (!isOpen) {
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({
-          name: '',
-          company: '',
-          phone: '',
-          category: '',
-          message: '',
-          privacyAgreed: false,
-        });
-      }, 300);
-    }
-  }, [isOpen]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>

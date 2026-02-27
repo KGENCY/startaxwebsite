@@ -1,4 +1,3 @@
-import ServiceNav from '../components/ServiceNav';
 import ServicePageNav from '../components/ServicePageNav';
 import ServiceKeywordNav from '../components/ServiceKeywordNav';
 import ServiceCTA from '../components/ServiceCTA';
@@ -18,35 +17,31 @@ const SECTIONS = [
 export default function TaxServicePage() {
   return (
     <>
-      <ServiceNav />
+      <section className={styles.hero}>
+        <div className={styles.heroGlow} />
+        <div className={styles.heroContent}>
+          <div className={styles.tag}>TAX SERVICE</div>
+          <h1 className={styles.heroTitle}>
+            35,996개 병원장님들을 위한<br />
+            <span className={styles.goldText}>특별한 세무서비스</span>를 경험해보세요
+          </h1>
+          <p className={styles.heroDesc}>
+            사업과 경영상태가 달라집니다.
+          </p>
+        </div>
+        <ServicePageNav currentPath="/services/tax" />
+        <ServiceKeywordNav sections={SECTIONS} defaultSection="bookkeeping" />
+      </section>
 
-      <main>
-        <section className={styles.hero}>
-          <div className={styles.heroGlow} />
-          <div className={styles.heroContent}>
-            <div className={styles.tag}>TAX SERVICE</div>
-            <h1 className={styles.heroTitle}>
-              35,996개 병원장님들을 위한<br />
-              <span className={styles.goldText}>특별한 세무서비스</span>를 경험해보세요
-            </h1>
-            <p className={styles.heroDesc}>
-              사업과 경영상태가 달라집니다.
-            </p>
-          </div>
-          <ServicePageNav currentPath="/services/tax" />
-          <ServiceKeywordNav sections={SECTIONS} defaultSection="bookkeeping" />
-        </section>
+      <BookkeepingSection />
+      <CorrectionSection />
+      <TransferSection />
+      <InheritanceSection />
 
-        <BookkeepingSection />
-        <CorrectionSection />
-        <TransferSection />
-        <InheritanceSection />
-
-        <ServiceCTA
-          title="전문 세무 상담이 필요하신가요?"
-          description="스타택스의 세무 전문가가 병원장님의 성공적인 경영을 함께합니다"
-        />
-      </main>
+      <ServiceCTA
+        title="전문 세무 상담이 필요하신가요?"
+        description="스타택스의 세무 전문가가 병원장님의 성공적인 경영을 함께합니다"
+      />
     </>
   );
 }

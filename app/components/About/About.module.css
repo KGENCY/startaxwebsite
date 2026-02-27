@@ -43,16 +43,18 @@
 }
 
 .body p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
   color: var(--text-secondary);
 }
 
 .signature {
-  max-width: 400px;
+  max-width: 460px;
   height: auto;
   margin-top: 12px;
-  opacity: 0.9;
+  opacity: 1;
+  image-rendering: -webkit-optimize-contrast;
+  filter: contrast(1.08);
 }
 
 .right {
@@ -175,11 +177,11 @@
   }
 
   .body p {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .signature {
-    max-width: 320px;
+    max-width: 360px;
   }
 
   .photoWrapper {

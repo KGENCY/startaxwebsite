@@ -64,6 +64,8 @@ export default function Hero() {
       updateTargets();
     }, Math.random() * 3000 + 5000);
 
+    let animationId: number;
+
     function animate() {
       if (!ctx || !canvas) return;
 
@@ -71,15 +73,13 @@ export default function Hero() {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       orbs.forEach((orb) => {
-        // 타겟 위치로 서서히 이동 (easing)
         const dx = orb.targetX - orb.x;
         const dy = orb.targetY - orb.y;
-        const easing = 0.002; // 이동 속도 (낮을수록 더 부드럽게)
+        const easing = 0.002;
 
         orb.x += dx * easing;
         orb.y += dy * easing;
 
-        // 그라데이션 오브 그리기
         const gradient = ctx.createRadialGradient(orb.x, orb.y, 0, orb.x, orb.y, orb.radius);
         gradient.addColorStop(0, orb.color);
         gradient.addColorStop(1, 'transparent');
@@ -88,7 +88,7 @@ export default function Hero() {
         ctx.fillRect(orb.x - orb.radius, orb.y - orb.radius, orb.radius * 2, orb.radius * 2);
       });
 
-      requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
     }
 
     animate();
@@ -102,6 +102,7 @@ export default function Hero() {
     return () => {
       window.removeEventListener('resize', handleResize);
       clearInterval(targetInterval);
+      cancelAnimationFrame(animationId);
     };
   }, []);
 

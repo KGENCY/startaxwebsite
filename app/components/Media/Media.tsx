@@ -20,8 +20,8 @@ export default function Media() {
             <a
               key={index}
               href={video.link}
-              target={video.link !== '#' ? '_blank' : undefined}
-              rel={video.link !== '#' ? 'noopener noreferrer' : undefined}
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.card}
             >
               <div className={styles.thumbnail}>

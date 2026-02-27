@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, ReactNode } from 'react';
+import styles from './FadeInSection.module.css';
 
 export default function FadeInSection({ children }: { children: ReactNode }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,14 +22,7 @@ export default function FadeInSection({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <div
-      ref={ref}
-      style={{
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-        transition: 'opacity 0.8s ease-out, transform 0.8s ease-out',
-      }}
-    >
+    <div ref={ref} className={`${styles.wrapper} ${isVisible ? styles.visible : ''}`}>
       {children}
     </div>
   );

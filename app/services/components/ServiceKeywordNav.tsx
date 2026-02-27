@@ -24,7 +24,6 @@ export default function ServiceKeywordNav({ sections, defaultSection }: ServiceK
             key={section.id}
             className={`${styles.keywordBtn} ${activeSection === section.id ? styles.keywordActive : ''}`}
             onClick={() => scrollTo(section.id)}
-            style={{ fontSize: '20px' }}
           >
             {section.label}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

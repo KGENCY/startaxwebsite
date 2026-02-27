@@ -1,4 +1,3 @@
-import ServiceNav from '../components/ServiceNav';
 import ServicePageNav from '../components/ServicePageNav';
 import ServiceKeywordNav from '../components/ServiceKeywordNav';
 import ServiceCTA from '../components/ServiceCTA';
@@ -20,36 +19,32 @@ const SECTIONS = [
 export default function ConsultingPage() {
   return (
     <>
-      <ServiceNav />
+      <section className={styles.hero}>
+        <div className={styles.heroGlow} />
+        <div className={styles.heroContent}>
+          <div className={styles.tag}>BUSINESS CONSULTING</div>
+          <h1 className={styles.heroTitle}>
+            35,996개 병원장님들을 위한<br />
+            <span className={styles.goldText}>경영 컨설팅</span>을 경험해보세요
+          </h1>
+          <p className={styles.heroDesc}>
+            사업과 경영상태가 달라집니다.
+          </p>
+        </div>
+        <ServicePageNav currentPath="/services/consulting" />
+        <ServiceKeywordNav sections={SECTIONS} />
+      </section>
 
-      <main>
-        <section className={styles.hero}>
-          <div className={styles.heroGlow} />
-          <div className={styles.heroContent}>
-            <div className={styles.tag}>BUSINESS CONSULTING</div>
-            <h1 className={styles.heroTitle}>
-              35,996개 병원장님들을 위한<br />
-              <span className={styles.goldText}>경영 컨설팅</span>을 경험해보세요
-            </h1>
-            <p className={styles.heroDesc}>
-              사업과 경영상태가 달라집니다.
-            </p>
-          </div>
-          <ServicePageNav currentPath="/services/consulting" />
-          <ServiceKeywordNav sections={SECTIONS} />
-        </section>
+      <VentureSection />
+      <TreasuryStockSection />
+      <SuccessionSection />
+      <IncorporationSection />
+      <RealEstateSection />
 
-        <VentureSection />
-        <TreasuryStockSection />
-        <SuccessionSection />
-        <IncorporationSection />
-        <RealEstateSection />
-
-        <ServiceCTA
-          title="경영 컨설팅이 필요하신가요?"
-          description="스타택스의 전문가가 기업의 성장과 안정적인 경영을 함께합니다"
-        />
-      </main>
+      <ServiceCTA
+        title="경영 컨설팅이 필요하신가요?"
+        description="스타택스의 전문가가 기업의 성장과 안정적인 경영을 함께합니다"
+      />
     </>
   );
 }

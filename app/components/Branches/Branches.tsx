@@ -84,6 +84,13 @@ const branchData: Branch[] = [
   },
 ];
 
+const PROFILE_IMAGE_STYLES: Record<string, string | undefined> = {
+  namyangju: styles.profileImageNamyangju,
+  bucheon: styles.profileImageBucheon,
+  bucheonnam: styles.profileImageBucheonnam,
+  suwon: styles.profileImageSuwon,
+};
+
 export default function Branches() {
   const [selectedBranch, setSelectedBranch] = useState<Branch | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -111,18 +118,6 @@ export default function Branches() {
 
     return () => window.removeEventListener('keydown', handleEsc);
   }, [isModalOpen, closeModal]);
-
-  const getInitials = (name: string) => {
-    return name.charAt(0);
-  };
-
-  const scrollToContact = () => {
-    closeModal();
-    const heroSection = document.getElementById('hero');
-    if (heroSection) {
-      heroSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section id="contact" className={styles.branches}>
@@ -191,17 +186,12 @@ export default function Branches() {
                   <img
                     src={selectedBranch.photo}
                     alt={`${selectedBranch.taxAgent} ${selectedBranch.title}`}
-                    className={`${styles.profileImage} ${
-                      selectedBranch.id === 'namyangju' ? styles.profileImageNamyangju :
-                      selectedBranch.id === 'bucheon' ? styles.profileImageBucheon :
-                      selectedBranch.id === 'bucheonnam' ? styles.profileImageBucheonnam :
-                      selectedBranch.id === 'suwon' ? styles.profileImageSuwon : ''
-                    }`}
+                    className={`${styles.profileImage} ${PROFILE_IMAGE_STYLES[selectedBranch.id] ?? ''}`}
                   />
                 ) : (
                   <div className={styles.profilePlaceholder}>
                     <span className={styles.profileInitial}>
-                      {getInitials(selectedBranch.taxAgent)}
+                      {selectedBranch.taxAgent.charAt(0)}
                     </span>
                     <svg className={styles.profileIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
                       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
