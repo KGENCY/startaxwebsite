@@ -48,6 +48,13 @@
   color: var(--text-secondary);
 }
 
+.signature {
+  max-width: 400px;
+  height: auto;
+  margin-top: 12px;
+  opacity: 0.9;
+}
+
 .right {
   display: flex;
   justify-content: center;
@@ -169,6 +176,10 @@
 
   .body p {
     font-size: 15px;
+  }
+
+  .signature {
+    max-width: 320px;
   }
 
   .photoWrapper {
